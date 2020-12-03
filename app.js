@@ -15,11 +15,28 @@ scores = [0, 0];
 roundScore = 0;
 activePlayer = 0;
 
-dice = Math.floor(Math.random()*6) + 1;
-document.querySelector('#current-' + activePlayer).textContent = dice;
+document.getElementById('score-0').textContent = '0';
+document.getElementById('score-1').textContent = '0';
+document.getElementById('current-1').textContent = '0';
+document.getElementById('current-0').textContent = '0';
+
+// document.querySelector('#current-' + activePlayer).textContent = dice;
 //document.querySelector('#current-0, #current-1').innerHTML = '<em>' + activePlayer +  '</em>';
 
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
+// var x = document.querySelector('#score-0').textContent;
+// console.log(x);
 
 // document.querySelector('.dice').style.display = 'none';
+
+
+document.querySelector('.btn-roll').addEventListener('click', function(){
+  /*  var dice =  Math.floor(Math.random()*6) + 1;
+    var randomDiceImage = 'dice-' + dice + '.png';
+var image1 = document.querySelector('img');
+image1.setAttribute('src', randomDiceImage);
+*/
+// Or another way 
+var dice = Math.floor(Math.random() * 6) + 1;
+    var diceDom = document.querySelector('.dice');
+    diceDom.src = 'dice-' + dice + '.png';
+});
